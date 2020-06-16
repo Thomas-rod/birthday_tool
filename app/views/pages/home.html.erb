@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-
+<nav>
+  <span class="logo"><span class="rainbow">C</span>ooki</span>
+  <% if current_user %>
+    <%= link_to "Dashboard", friends_path, class:"link-nav main-button" %>
+  <% else %>
+    <%= link_to 'Sign in', new_user_session_path, class: "link-nav" %>
+    <%= link_to 'Free account', new_user_registration_path, class: "link-nav main-button" %>
+  <% end %>
+</nav>
+<div id="main">
+  <div id="main--valueprop">
+    <h1>Stop forgetting Birthdays</h1>
+    <h3>Switch to Cooki</h3>
+    <%= link_to 'Free account', new_user_registration_path, class: "link-nav link-nav__block main-button" %>
+  </div>
+  <div class="cake">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+      <div class="candle">
+          <div class="flame"></div>
+      </div>
+  </div>
+</div>

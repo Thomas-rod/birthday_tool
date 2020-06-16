@@ -2,3 +2,44 @@
 body {
   background-image: linear-gradient( 135deg, #F6D242 10%, #FF52E5 100%);
 }
+
+$margin-top: 15vh;
+$margin-side: 7rem;
+
+
+nav,
+#main {
+  margin: 0 $margin-side;
+}
+
+nav {
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  height:$margin-top;
+  span:first-child {
+    margin-right:auto;
+  }
+  .link-nav {
+    margin: 0 1rem;
+  }
+}
+.logo {
+  font-size:4rem;
+}
+
+#main {
+  margin-top:$margin-top;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+    #main--valueprop {
+      width:60%;
+
+      a {
+          width:50%;
+        }
+    }
+
