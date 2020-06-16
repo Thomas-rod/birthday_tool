@@ -19,9 +19,12 @@ thomas = User.create!(first_name: "Thomas", last_name: "Rodier", email: "thomas@
 puts "Second step : #{User.count} Users have been created - Done"
 
 puts "Third step : Friends creation - Initialization "
-Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "Dad", gender: "Male")
-Friend.create!(user: thomas, first_name: "Christine", last_name: "Valain", birthday_date: Date.new(1960, 3, 15), nickname: "Mom", gender: "Female")
-Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: Date.new(1995, 2, 17), nickname: "Brother",gender: "Male")
+Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "dad", gender: "male")
+Friend.create!(user: thomas, first_name: "Christine", last_name: "Valain", birthday_date: Date.new(1960, 3, 15), nickname: "mom", gender: "female")
+Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: Date.today, nickname: "brother",gender: "male")
+Friend.create!(user: thomas, first_name: "Estelle", last_name: "Avarello", birthday_date: Date.new(1995, 3, 17), nickname: "sister",gender: "female")
+Friend.create!(user: thomas, first_name: "Audrey", last_name: "Avarello", birthday_date: Date.new(1995, 4, 17), nickname: "sister",gender: "female")
+
 puts "Third step : #{Friend.count} Friends have been created - Done"
 
 

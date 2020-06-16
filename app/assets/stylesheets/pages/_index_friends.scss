@@ -1,0 +1,97 @@
+.container-content {
+  // CAME FROM NAVBAR HEIGHT
+  margin-top: 10vh;
+  height:90vh;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  }
+  #container-content--left {
+    margin: 0 auto;
+    width: 30%;
+  }
+      #today-birthday,
+      #calendar-birthday {
+        height:40vh
+      }
+  #container-content--right {
+    margin: 0 auto;
+    width: 60%;
+    height:80vh;
+  }
+      #container-content--right--top {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        #add-birthday,
+        #animation-birthday {
+          height:20vh;
+        }
+      }
+          #add-birthday {
+            width:20%;
+          }
+          #animation-birthday {
+            width:75%;
+          }
+
+    #list-birthday {
+      height:60vh;
+    }
+
+.box-container {
+  box-shadow: 0 0px 2px 1px rgba(0,0,0, 0.2);
+  border-radius: 15px;
+  padding:1rem;
+  &:not(#add-birthday) {
+    background-color: $gray;
+  }
+  &:not(#list-birthday) {
+    margin: 1.5rem 0;
+  }
+}
+
+//--------------------------//
+//        ADD-BIRTHDAY      //
+//--------------------------//
+
+#add-birthday {
+  background: rgb(253,255,182);
+  background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color:$purple;
+  cursor:pointer;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+  &:hover {
+    transform:translate(0px, -3px);
+    box-shadow: 0 15px 20px 2px rgba(0,0,0, 0.2);
+  }
+  svg {
+    margin:0 auto 0.5rem auto;
+    display:block;
+    width:5rem;
+    height:5rem;
+  }
+}
+
+//--------------------------//
+//      TODAY-BIRTHDAY      //
+//--------------------------//
+
+ #today-birthday {
+  color:$purple;
+  text-align:center;
+ }
+
+.fullname {
+  font-size:1.5rem;
+}
+
+//--------------------------//
+//        ADD-BIRTHDAY      //
+//--------------------------//
