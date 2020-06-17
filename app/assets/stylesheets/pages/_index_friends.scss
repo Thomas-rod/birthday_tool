@@ -81,6 +81,7 @@
     transform .3s ease,
     box-shadow .3s ease;
   &:hover {
+    color:$dark;
     background: rgb(253,255,182);
     background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
     transform:translate(0px, -3px);
