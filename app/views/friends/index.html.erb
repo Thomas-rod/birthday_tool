@@ -14,15 +14,10 @@
             <%= image_tag 'male.png', class:"avatar-card-today-birthday" %>
           <% end %>
           <div>
-            <p><%= @today_birthday.first.full_name %></p>
+            <h6><%= @today_birthday.first.full_name %></h6>
             <p><%= @today_birthday.first.gender_she_or_he %>'s <%= @today_birthday.first.friends_age %> years old today</p>
             <p>Don't miss the birthday !</p>
           </div>
-        </div>
-        <div class="card-todays-birthday--info">
-          <%= link_to '#' do %>
-            <p>Mission complete captain</p>
-          <% end %>
         </div>
       </div>
       <% end %>

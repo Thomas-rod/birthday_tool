@@ -1,0 +1,20 @@
+.label {
+  display:block;
+  width:70%;
+  text-align:center;
+  margin: 0.5rem auto 0 auto;
+  padding:0.3rem 1rem;
+  border-radius:5px;
+  right: 10%;
+  top: -.5rem;
+
+}
+
+.done {
+  background-color: $green;
+}
+
+.not-done {
+  color:$white;
+  background-color: $red;
+}

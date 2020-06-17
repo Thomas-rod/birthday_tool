@@ -1,13 +1,15 @@
 .card-todays-birthday{
   width:90%;
-  height:100%;
-  margin:1rem auto;
-  text-align:center;
+  margin: 1rem auto;
+  position:relative;
+  h6 {
+    margin-bottom: 0.5rem;
+  }
 }
 
 
-.card-todays-birthday--info {
-  display:flex;
-  justify-content:left;
-  align-items:center;
-}
+    .card-todays-birthday--info {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
