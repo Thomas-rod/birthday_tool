@@ -18,8 +18,10 @@ p {
 }
 
 a {
+  color: $white;
   text-decoration:none;
   &:hover {
+    color: $orange;
     text-decoration:none;
   }
 }

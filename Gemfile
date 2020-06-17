@@ -31,6 +31,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'pundit'
 
+gem "simple_calendar", "~> 2.0"
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
+
 # Cloudinary
 gem 'cloudinary'
 

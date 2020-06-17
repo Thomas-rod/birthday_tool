@@ -1,13 +1,11 @@
 .label {
-  display:block;
-  width:70%;
   text-align:center;
-  margin: 0.5rem auto 0 auto;
-  padding:0.3rem 1rem;
+  padding:0.2rem 1rem;
   border-radius:5px;
-  right: 10%;
-  top: -.5rem;
-
+  position:absolute;
+  top:.3rem;
+  right:1rem;
+  color: white;
 }
 
 .done {
@@ -17,4 +15,52 @@
 .not-done {
   color:$white;
   background-color: $red;
+}
+
+.circle-birthday {
+  padding:0.5rem 1rem;
+  border-radius:50%;
+  background-color: $green;
+}
+
+.dad,
+.mom,
+.brother,
+.sister,
+.oncle,
+.aut,
+.grandmother,
+.grandfather {
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.father-in-law,
+.mother-in-law,
+.stepfather,
+.stepmother {
+  background: #C6FFDD;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.best-friend,
+.boy-friend,
+.girl-friend,
+.friend {
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.dog,
+.cat,
+.horse {
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
