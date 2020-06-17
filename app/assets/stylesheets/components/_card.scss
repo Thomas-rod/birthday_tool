@@ -13,3 +13,38 @@
       justify-content:space-between;
       align-items:center;
     }
+
+
+.card-friend {
+  min-width:30%;
+  max-height:40%;
+  margin:1rem 0.5rem;
+  padding:1rem;
+  border-radius:15px;
+  position:relative;
+  cursor:pointer;
+  transition: transform .2s ease;
+  &:hover {
+    transform: translate(0, -2px);
+  }
+}
+
+    .card-friend--body {
+      display:flex;
+      align-items:center;
+      .name {
+        font-size:1.2rem;
+        font-weight:bold;
+      }
+    }
+
+          .card-friend--body--infos {
+            margin: 0 auto;
+          }
+
+
+
+.card-birthday-month {
+  text-align:center;
+  min-width:20%;
+}

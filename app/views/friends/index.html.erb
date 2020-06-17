@@ -9,9 +9,9 @@
       <div class="card-todays-birthday">
         <div class="card-todays-birthday--info">
           <% if current_user.photo.attached? %>
-            <%= cl_image_tag @today_birthday.first.photo.key, class:"avatar-card-today-birthday" %>
+            <%= cl_image_tag @today_birthday.first.photo.key, class:"avatar-card" %>
           <% else %>
-            <%= image_tag 'male.png', class:"avatar-card-today-birthday" %>
+            <%= image_tag 'male.png', class:"avatar-card" %>
           <% end %>
           <div>
             <h6><%= @today_birthday.first.full_name %></h6>
@@ -23,6 +23,13 @@
       <% end %>
     </div>
     <div class="box-container" id="calendar-birthday">
+      <%= month_calendar events: @birthdays do |date, birthdays| %>
+        <%= date.day %>
+        <% counter = 1 %>
+        <% birthdays.each do |birthday| %>
+          <span></span>
+        <% end %>
+      <% end %>
     </div>
   </div>
   <div id="container-content--right">
@@ -32,12 +39,40 @@
         <p>Add birthday</p>
       </div>
       <div class="box-container" id="animation-birthday">
+        <h5>This month, <%= @birthday_of_the_month.count %> of your friends have a birthday !</h5>
+        <div id="container-card-birthday-month">
+          <% @birthday_of_the_month.each do |b| %>
+            <div class="card-birthday-month">
+              <% if current_user.photo.attached? %>
+                <%= cl_image_tag b.friend.photo.keyn class:"avatar-large" %>
+                <p><%= b.friend.full_name %></p>
+              <% else %>
+                <%= image_tag 'male.png', class:"avatar-large" %>
+                <p><%= b.friend.full_name %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="box-container" id="list-birthday">
+      <% counter = 1 %>
       <% @friends.each do  |f| %>
-        <p><%= f.first_name %></p>
+      <div class="card-friend" id="card-<%= counter %>">
+        <span class="label <%= f.nickname %>"><%= f.nickname.capitalize %></span>
+        <div class="card-friend--body">
+          <%= image_tag 'male.png', class:"avatar-card--small" %>
+          <div class="card-friend--body--infos">
+            <p class="name"><%= f.first_name %></p>
+            <p class="age"><%= f.friends_age %> years old</p>
+          </div>
+        </div>
+        <p>Birthday date : <%= f.birthday_date.strftime("%-d %B")%></p>
+        <p>23 days left before birthday !</p>
+      </div>
+      <% counter +=1 %>
       <% end %>
+    <%= will_paginate @friends %>
     </div>
   </div>
 </div>

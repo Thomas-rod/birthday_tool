@@ -1,7 +1,9 @@
 class FriendsController < ApplicationController
   def index
-    @friends = policy_scope(Friend)
+    @friends = policy_scope(Friend.paginate(:page => params[:page], :per_page => 6))
     today_birthday
+    @birthdays = birthday_scope
+    @birthday_of_the_month = birthday_of_the_month
   end
 
   def create
@@ -17,5 +19,13 @@ class FriendsController < ApplicationController
       end
     end
     return @today_birthday
+  end
+
+  def birthday_of_the_month
+    current_user.birthdays.select { |b| (b.start.month == Date.today.month && b.start.year == Date.today.year)}.sort_by(&:start)
+  end
+
+  def birthday_scope
+    current_user.birthdays
   end
 end

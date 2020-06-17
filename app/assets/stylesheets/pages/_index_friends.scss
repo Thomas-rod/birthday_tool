@@ -1,3 +1,19 @@
+
+#today-birthday,
+#calendar-birthday,
+#add-birthday,
+#animation-birthday,
+#list-birthday {
+  background: rgb(160,196,255);
+  background: -moz-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
+  color:$white;
+}
+
+
+
 .container-content {
   // CAME FROM NAVBAR HEIGHT
   margin-top: 10vh;
@@ -11,9 +27,11 @@
     margin: 0 auto;
     width: 30%;
   }
-      #today-birthday,
+      #today-birthday {
+        height:30vh
+      }
       #calendar-birthday {
-        height:40vh
+        height:50vh
       }
   #container-content--right {
     margin: 0 auto;
@@ -58,7 +76,6 @@
   text-align:center;
   font-weight: bold;
   font-size: 1.3rem;
-  color:$purple;
   cursor:pointer;
   transition:
     transform .3s ease,
@@ -78,11 +95,54 @@
 }
 
 //--------------------------//
+//    ANIMATION-BIRTHDAY    //
+//--------------------------//
+
+#container-card-birthday-month {
+  margin:0.5rem;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+
+//--------------------------//
+//       LIST-BIRTHDAY      //
+//--------------------------//
+
+#list-birthday {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  position:relative;
+}
+
+
+//--------------------------//
+//         PAGINATION       //
+//--------------------------//
+.pagination {
+  position:absolute;
+  bottom:.5rem;
+  left:1rem;
+  a,
+  span,
+  em {
+    padding: 0 0.5rem;
+  }
+  .disabled,
+  .current {
+    color:$orange;
+  }
+}
+
+
+//--------------------------//
 //      TODAY-BIRTHDAY      //
 //--------------------------//
 
  #today-birthday {
-  color:$purple;
   h5 {
     text-align:center;
   }
@@ -93,5 +153,10 @@
 }
 
 //--------------------------//
-//        ADD-BIRTHDAY      //
+//     CALENDAR-BIRTHDAY    //
 //--------------------------//
+
+
+#calendar-birthday {
+  min-width: 380px;
+}

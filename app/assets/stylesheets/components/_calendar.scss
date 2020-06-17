@@ -1,0 +1,79 @@
+.calendar-heading {
+  margin: 0 .5rem 0.5rem 0.5rem;
+  padding: 0 1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  a {
+    color: $orange;
+    transition:
+    font-weight .2s ease,
+    transform .2s ease;
+    &:hover {
+      font-weight:bold;
+    }
+    &:hover:first-child {
+      transform: translate(-2px, 0px);
+    }
+    &:hover:last-child {
+      transform: translate(2px, 0px);
+    }
+  }
+}
+
+.table thead th {
+    border-bottom: 0px !important;
+}
+
+.table th {
+  border-top: 0px !important;
+}
+
+
+
+
+
+
+.simple-calendar {
+  .day {
+    text-align:center;
+  }
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    color:$pink !important;
+    font-weight:bold;
+    font-size:1.05rem;
+  }
+  .past {}
+  .future {}
+  .start-date {}
+  .prev-month {
+    color: rgba($light-gray, 0.5);
+  }
+  .next-month {
+  color: rgba($light-gray, 0.5);
+  }
+  .current-month {
+    color: white;
+  }
+
+  .has-events {
+    position:relative;
+    span {
+      width:100%;
+      height:100%;
+      position:absolute;
+      bottom: 0;
+      left:0;
+      border-radius:100%;
+      background-color: rgba($yellow, 0.4);
+    }
+  }
+}
