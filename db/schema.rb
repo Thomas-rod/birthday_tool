@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_154345) do
+ActiveRecord::Schema.define(version: 2020_06_18_140110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_06_17_154345) do
     t.boolean "reminder_today_morning", default: false
     t.boolean "reminder_today_noon", default: false
     t.boolean "reminder_today_night", default: false
+    t.string "photo_placeholder", default: "001-man"
     t.index ["user_id"], name: "index_friends_on_user_id"
   end
 
@@ -73,6 +74,8 @@ ActiveRecord::Schema.define(version: 2020_06_17_154345) do
     t.string "first_name", default: "John"
     t.string "last_name", default: "Doe"
     t.date "birthday_date", default: "-4712-01-01"
+    t.string "gender", default: "male"
+    t.string "photo_placeholder", default: "001-man"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

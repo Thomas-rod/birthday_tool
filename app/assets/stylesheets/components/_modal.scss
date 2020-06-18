@@ -1,0 +1,153 @@
+//--------------------------//
+//     MODAL NAVIGATION     //
+//--------------------------//
+
+.modal-navigation-bg {
+  position:absolute;
+  top:0;
+  width:100vw;
+  height:100vh;
+  display: none;
+  visibility: hidden;
+}
+
+.modal-navigation {
+  z-index: 1 !important;
+  position:absolute;
+  top: 10%;
+  right:10px;
+  width:20%;
+  padding:0.3rem;
+  border-radius:5px;
+  background: rgb(160,196,255);
+  background: -moz-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
+  color:$white;
+  box-shadow: 0 10px 20px 10px rgba(0,0,0,0.2);
+  display: none;
+  visibility: hidden;
+  a {
+    color: $white;
+  }
+  p {
+    padding: 0.5rem 2rem;
+    &:hover {
+    color:$dark;
+    border-radius:5px;
+    background: rgb(253,255,182);
+    background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+    transform:translate(0px, -3px);
+    }
+  }
+}
+
+
+//--------------------------//
+//    MODAL ADD BIRTHDAY    //
+//--------------------------//
+
+
+.modal-bg-add-birthday {
+  position:absolute;
+  top:0;
+  width:100vw;
+  height:100vh;
+  background-color: rgba($gray,0.3);
+  display:none;
+  visibility: hidden;
+}
+
+    .modal-add-birthday {
+      position:relative;
+      display:block;
+      margin:10vh auto;
+      padding:2rem;
+      width:50%;
+      height:80vh;
+      border-radius:15px;
+      box-shadow: 0 10px 20px 10px rgba(0,0,0,0.2);
+      background: rgb(160,196,255);
+      background: -moz-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+      background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+      background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
+      color:$white;
+      display:none;
+      visibility: hidden;
+    }
+
+    .modal-add-birthday h2 {
+      background-color: $red;
+      background-image: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+
+    .modal-add-birthday .close-icon {
+      position:absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: $white;
+      cursor:pointer;
+    }
+
+
+//--------------------------//
+//     FORM ADD BIRTHDAY    //
+//--------------------------//
+
+form .rainbow-label {
+  font-size:1.2rem;
+  font-weight:bold;
+  background-color: $red;
+  background-image: linear-gradient(330deg, rgba(253,255,182,1) 18%, rgba(244,244,244,1) 54%, rgba(255,214,165,1) 86%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+#name-section,
+#birthday-date-section,
+#photo-section,
+#label-radio-button-section {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+
+#name-section,
+#radio-button-section,
+#footer-section {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+#name-section,
+#radio-button-section {
+  justify-content:space-between;
+}
+
+#footer-section {
+ justify-content:center;
+}
+
+input > #file-upload-button {
+  border:0px;
+  background-color:$purple;
+  padding:1rem;
+}
+
+
+//--------------------------//
+//         KEY FRAME        //
+//--------------------------//

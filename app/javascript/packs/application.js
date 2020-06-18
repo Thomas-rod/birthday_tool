@@ -28,9 +28,11 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { modalLogout } from '../components/modal_logout'
+import { modalAddBirthday } from '../components/modal_add_birthday'
 
 document.addEventListener('turbolinks:load', () => {
   modalLogout();
+  modalAddBirthday();
   // Call your functions here, e.g:
   // initSelect2();
 });

@@ -29,40 +29,9 @@
   align-items:center;
   z-index:1;
   img,
-  p,
+  #name-navbar,
   i {
     padding: 0px 0.5rem;
-  }
-}
-
-.modal-navigation {
-  display: none;
-  opacity:0;
-  width:100%;
-  padding:0.3rem;
-  position:absolute;
-  bottom:-9vh;
-  right:.5rem;
-  background: rgb(160,196,255);
-  background: -moz-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
-  background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
-  background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
-  color:$white;
-  border-radius:5px;
-  box-shadow: 0 10px 20px 10px rgba(0,0,0,0.2);
-  a {
-    color: $white;
-  }
-  p {
-    padding: 0.5rem 2rem;
-    &:hover {
-    color:$dark;
-    border-radius:5px;
-    background: rgb(253,255,182);
-    background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
-    transform:translate(0px, -3px);
-    }
   }
 }
 

@@ -9,18 +9,20 @@
     <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, class:"avatar-large" %>
     <% else %>
-      <%= image_tag 'male.png', class:"avatar-large" %>
+      <%= image_tag "#{current_user.photo_placeholder}.svg", class:"avatar-large" %>
     <% end %>
-    <p><%= current_user.full_name %></p>
+    <p id="name-navbar"><%= current_user.full_name %></p>
     <i class="fas fa-caret-down"></i>
     <div class="backdrop"></div>
-    <div class="modal-navigation">
-    <%= link_to destroy_user_session_path, method: 'delete' do %>
-      <p>Log out <i class="fas fa-sign-out-alt"></i></p>
-    <% end %>
-    <%= link_to '#' do %>
-      <p>My profil <i class="fas fa-user-alt"></i></p>
-    <% end %>
+    <div class="modal-navigation-bg">
+      <div class="modal-navigation">
+      <%= link_to destroy_user_session_path, method: 'delete' do %>
+        <p>Log out <i class="fas fa-sign-out-alt"></i></p>
+      <% end %>
+      <%= link_to '#' do %>
+        <p>My profil <i class="fas fa-user-alt"></i></p>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

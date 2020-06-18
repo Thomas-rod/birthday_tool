@@ -25,7 +25,7 @@ Friend.create!(user: thomas, first_name: "Maguelone", last_name: "Lapeyre", birt
 Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: Date.today, nickname: "brother",gender: "male")
 Friend.create!(user: thomas, first_name: "Estelle", last_name: "Avarello", birthday_date: Date.new(1995, 3, 17), nickname: "sister",gender: "female")
 Friend.create!(user: thomas, first_name: "Audrey", last_name: "Avarello", birthday_date: Date.new(1995, 10, 27), nickname: "sister",gender: "female")
-Friend.create!(user: thomas, first_name: "Salomé", last_name: "Marcadé", birthday_date: Date.new(1995, 8, 17), nickname: "dad", gender: "male")
+Friend.create!(user: thomas, first_name: "Salomé", last_name: "Marcadé", birthday_date: Date.new(1995, 8, 17), nickname: "girl-friend", gender: "male")
 Friend.create!(user: thomas, first_name: "Mickaël", last_name: "Marcadé", birthday_date: Date.new(1969, 5, 19), nickname: "father-in-law", gender: "male")
 Friend.create!(user: thomas, first_name: "Catherine", last_name: "Marcadé", birthday_date: Date.new(1968, 2, 9), nickname: "mother-in-law",gender: "female")
 
