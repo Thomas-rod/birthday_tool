@@ -15,3 +15,8 @@ end
 task :send_reminders_today_night => :environment do
   User.send_reminders_today_night
 end
+
+task :update_feed => :environment do
+  puts "Updating feed..."
+  puts "done."
+end
