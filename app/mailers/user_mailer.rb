@@ -24,4 +24,26 @@ class UserMailer < ApplicationMailer
       subject: "Hey #{@user.first_name.capitalize}, do not forget your friend's birthday today 🚀 !"
     )
   end
+
+  def send_reminders_today_noon
+    @greeting = "Hi"
+    @user = params[:user]
+    @today_birthdays = params[:today_birthdays]
+    mail(
+      to: @user.email,
+      subject: "Hey #{@user.first_name.capitalize}, did you call ?"
+    )
+  end
+
+  def send_reminders_today_night
+    @greeting = "Hi"
+    @user = params[:user]
+    @today_birthdays = params[:today_birthdays]
+    mail(
+      to: @user.email,
+      subject: "#{@user.first_name.capitalize} it's almost too late 🚀 !"
+    )
+  end
+
+
 end
