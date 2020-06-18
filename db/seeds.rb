@@ -22,7 +22,7 @@ puts "Third step : Friends creation - Initialization "
 Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "dad", gender: "male")
 Friend.create!(user: thomas, first_name: "Christine", last_name: "Valain", birthday_date: Date.new(1960, 3, 15), nickname: "mom", gender: "female")
 Friend.create!(user: thomas, first_name: "Maguelone", last_name: "Lapeyre", birthday_date: Date.new(1960, 10, 25), nickname: "stepmother", gender: "female")
-Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: Date.today, nickname: "brother",gender: "male")
+Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: (Date.today + 1), nickname: "brother",gender: "male", reminder_previous_day: true)
 Friend.create!(user: thomas, first_name: "Estelle", last_name: "Avarello", birthday_date: Date.new(1995, 3, 17), nickname: "sister",gender: "female")
 Friend.create!(user: thomas, first_name: "Audrey", last_name: "Avarello", birthday_date: Date.new(1995, 10, 27), nickname: "sister",gender: "female")
 Friend.create!(user: thomas, first_name: "Salomé", last_name: "Marcadé", birthday_date: Date.new(1995, 8, 17), nickname: "girl-friend", gender: "male")

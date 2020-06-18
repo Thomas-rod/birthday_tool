@@ -39,6 +39,12 @@ gem 'will_paginate', '~> 3.1.0'
 # Cloudinary
 gem 'cloudinary'
 
+# Letter Opener
+gem 'letter_opener', group: :development
+
+# Postmark to send transactionnal emails
+gem 'postmark-rails'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
