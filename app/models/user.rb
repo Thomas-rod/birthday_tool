@@ -34,7 +34,22 @@ class User < ApplicationRecord
   #---------------------------------#
   #              METHOD             #
   #---------------------------------#
+      # today_birthdays = user.birthdays.select{ |b| b.start.day == Date.today.day && b.start.month == Date.today.month }
 
+  def send_reminder_previous_day
+    User.all.each do |user|
+      tomorow_birthdays = user.birthdays.select{ |b| (b.start.day) == (Date.today.day + 1) && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_previous_day == true }
+      UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_previous_day.deliver_now
+    end
+  end
+
+    # PICK ALL USER
+    # CHECK FOR EVERY USER IF THERE IS A FRIEND BIRTHDAY TODAY OR THE DAY AFTER
+    # FOR EVERY BIRTHDAY SELECTED, CHECK THE REMINDER SELECTED
+      # REMINDER DAY BEFORE -> SEND AN EMAIL TO PREVENT USER THERE IS A BIRTHDAY TOMOROW
+      # REMINDER CURRENT DAY MORNING -> SEND AN EMAIL DO NOT FORGET THE BIRTHDAY
+      # REMINDER CURRENT DAY NOON -> SEND AN EMAIL DO NOT FORGET THE BIRTHDAY
+      # REMINDER CURRENT DAY NIGHT -> SEND AN EMAIL DO NOT FORGET THE BIRTHDAY
 
   def full_name
     return "#{self.first_name.capitalize} #{self.last_name.capitalize}"
