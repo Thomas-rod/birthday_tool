@@ -1,19 +1,19 @@
 desc "This task is called by the Heroku scheduler add-on"
 
 task :send_reminders_previous_day => :environment do
-  send_reminders_previous_day
+  User.send_reminders_previous_day
 end
 
 task :send_reminders_today_morning => :environment do
-  send_reminders_today_morning
+  User.send_reminders_today_morning
 end
 
 task :send_reminders_today_noon => :environment do
-  send_reminders_today_noon
+  User.send_reminders_today_noon
 end
 
 task :send_reminders_today_night => :environment do
-  send_reminders_today_night
+  User.send_reminders_today_night
 end
 
 task :update_feed => :environment do
