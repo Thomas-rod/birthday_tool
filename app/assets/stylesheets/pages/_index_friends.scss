@@ -27,9 +27,6 @@
     margin: 0 auto;
     width: 30%;
   }
-      #today-birthday {
-        height:30vh
-      }
       #calendar-birthday {
         height:50vh
       }
@@ -139,15 +136,12 @@
   }
 }
 
-
 //--------------------------//
 //      TODAY-BIRTHDAY      //
 //--------------------------//
 
- #today-birthday {
-  h5 {
-    text-align:center;
-  }
+ #today-birthday h5 {
+  text-align:center;
  }
 
 .fullname {
@@ -155,10 +149,248 @@
 }
 
 //--------------------------//
-//     CALENDAR-BIRTHDAY    //
+//--------------------------//
+//      RESPONSIVENESS      //
+//--------------------------//
 //--------------------------//
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
 
-#calendar-birthday {
-  min-width: 380px;
+  //--------------------------//
+  //        GLOBAL CSS        //
+  //--------------------------//
+
+  html {
+    font-size: 10px;
+  }
+
+  .container-content {
+    display:block;
+    margin:15vh 0 5vh 0;
+    height:100%;
+
+  }
+
+  #container-content--left,
+  #container-content--right {
+    width:90%;
+    height:100%;
+  }
+
+  //--------------------------//
+  //       NAVBAR &MODAL      //
+  //--------------------------//
+
+  .navbar-app {
+    height:15vh;
+  }
+
+  .modal-navigation {
+    top:12%;
+    width:50%;
+  }
+  .modal-bg-add-birthday {
+    position:fixed;
+    top:0;
+  }
+  .modal-add-birthday {
+    margin: 2vh auto;
+    width:95%;
+    height:97vh;
+  }
+
+  //--------------------------//
+  //        SECTION CSS       //
+  //--------------------------//
+
+  #calendar-birthday {
+    height:unset !important;
+  }
+
+  #add-birthday,
+  #animation-birthday {
+    height:25vh !important;
+  }
+
+  #add-birthday {
+    width:30%;
+    padding:4rem 0;
+    color:$dark;
+    background: rgb(253,255,182);
+    background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+  }
+  #animation-birthday {
+    width:65%;
+    h5 {
+      text-align:center;
+    }
+  }
+
+  #container-card-birthday-month {
+    justify-content:space-between;
+  }
+
+  #list-birthday {
+    height:unset !important;
+    justify-content:center;
+  }
+
+  #today-birthday h5 {
+    font-size:1.8rem;
+    background-image: linear-gradient(145deg, #fdffb6 20%, #caffbf 50%, #9bf6ff 80%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  //--------------------------//
+  //      COMPONENTS CSS      //
+  //--------------------------//
+
+  .card-todays-birthday h6 {
+    font-size:1.7rem;
+  }
+
+  .card-friend {
+    width:90%;
+  }
+  .card-friend--body .name {
+    font-size:2rem;
+  }
+  .avatar-card--small {
+    width:10rem;
+  }
+  .label {
+    top: -1rem;
+  }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+  //--------------------------//
+  //        GLOBAL CSS        //
+  //--------------------------//
+
+  html {
+    font-size: 10px;
+  }
+
+  .container-content {
+    display:block;
+    margin:15vh 0 5vh 0;
+    height:100%;
+
+  }
+
+  #container-content--left,
+  #container-content--right {
+    width:90%;
+    height:100%;
+  }
+
+  //--------------------------//
+  //       NAVBAR &MODAL      //
+  //--------------------------//
+
+  .navbar-app {
+    height:15vh;
+  }
+
+  .modal-navigation {
+    top:12%;
+    width:50%;
+  }
+  .modal-bg-add-birthday {
+    position:fixed;
+    top:0;
+  }
+  .modal-add-birthday {
+    margin: 2vh auto;
+    width:95%;
+    height:97vh;
+  }
+
+  //--------------------------//
+  //        SECTION CSS       //
+  //--------------------------//
+
+  #calendar-birthday {
+    height:unset !important;
+  }
+
+  #add-birthday,
+  #animation-birthday {
+    height:25vh !important;
+  }
+
+  #add-birthday {
+    width:30%;
+    padding:4rem 0;
+    color:$dark;
+    background: rgb(253,255,182);
+    background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+  }
+  #animation-birthday {
+    width:65%;
+    h5 {
+      text-align:center;
+    }
+  }
+
+  #container-card-birthday-month {
+    justify-content:space-between;
+  }
+
+  #list-birthday {
+    height:unset !important;
+    justify-content:center;
+  }
+
+  #today-birthday h5 {
+    font-size:1.8rem;
+    background-image: linear-gradient(145deg, #fdffb6 20%, #caffbf 50%, #9bf6ff 80%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  //--------------------------//
+  //      COMPONENTS CSS      //
+  //--------------------------//
+
+  .card-todays-birthday h6 {
+    font-size:1.7rem;
+  }
+
+  .card-friend {
+    width:90%;
+  }
+  .card-friend--body .name {
+    font-size:2rem;
+  }
+  .avatar-card--small {
+    width:10rem;
+  }
+  .label {
+    top: -1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+
+}
+

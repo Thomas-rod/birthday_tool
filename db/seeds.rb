@@ -19,15 +19,15 @@ thomas = User.create!(first_name: "Thomas", last_name: "Rodier", email: "thomas@
 puts "Second step : #{User.count} Users have been created - Done"
 
 puts "Third step : Friends creation - Initialization "
-Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "dad", gender: "male")
-Friend.create!(user: thomas, first_name: "Christine", last_name: "Valain", birthday_date: Date.new(1960, 3, 15), nickname: "mom", gender: "female")
-Friend.create!(user: thomas, first_name: "Maguelone", last_name: "Lapeyre", birthday_date: Date.new(1960, 10, 25), nickname: "stepmother", gender: "female")
-Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: (Date.today + 1), nickname: "brother",gender: "male", reminder_previous_day: true)
-Friend.create!(user: thomas, first_name: "Estelle", last_name: "Avarello", birthday_date: Date.new(1995, 3, 17), nickname: "sister",gender: "female")
-Friend.create!(user: thomas, first_name: "Audrey", last_name: "Avarello", birthday_date: Date.new(1995, 10, 27), nickname: "sister",gender: "female")
-Friend.create!(user: thomas, first_name: "Salomé", last_name: "Marcadé", birthday_date: Date.new(1995, 8, 17), nickname: "girl-friend", gender: "male")
-Friend.create!(user: thomas, first_name: "Mickaël", last_name: "Marcadé", birthday_date: Date.new(1969, 5, 19), nickname: "father-in-law", gender: "male")
-Friend.create!(user: thomas, first_name: "Catherine", last_name: "Marcadé", birthday_date: Date.new(1968, 2, 9), nickname: "mother-in-law",gender: "female")
+Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "dad")
+Friend.create!(user: thomas, first_name: "Christine", last_name: "Valain", birthday_date: Date.new(1960, 3, 15), nickname: "mom")
+Friend.create!(user: thomas, first_name: "Maguelone", last_name: "Lapeyre", birthday_date: Date.new(1960, 10, 25), nickname: "stepmother")
+Friend.create!(user: thomas, first_name: "Quentin", last_name: "Rodier", birthday_date: (1995, 92, (Date.today.day + 1)), nickname: "brother", reminder_previous_day: true)
+Friend.create!(user: thomas, first_name: "Estelle", last_name: "Avarello", birthday_date: Date.new(1995, 3, 17), nickname: "sister")
+Friend.create!(user: thomas, first_name: "Audrey", last_name: "Avarello", birthday_date: Date.new(1995, 10, 27), nickname: "sister")
+Friend.create!(user: thomas, first_name: "Salomé", last_name: "Marcadé", birthday_date: Date.new(1995, 8, 17), nickname: "girl-friend")
+Friend.create!(user: thomas, first_name: "Mickaël", last_name: "Marcadé", birthday_date: Date.new(1969, 5, 19), nickname: "father-in-law")
+Friend.create!(user: thomas, first_name: "Catherine", last_name: "Marcadé", birthday_date: Date.new(1968, 2, 9), nickname: "mother-in-law)
 
 
 puts "Third step : #{Friend.count} Friends have been created - Done"

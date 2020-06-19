@@ -1,10 +1,10 @@
 <nav>
   <span class="logo"><span class="rainbow">C</span>ooki</span>
   <% if current_user %>
-    <%= link_to "Dashboard", friends_path, class:"link-nav main-button" %>
+    <%= link_to "Dashboard", friends_path, class:"link-nav main-button " %>
   <% else %>
     <%= link_to 'Sign in', new_user_session_path, class: "link-nav" %>
-    <%= link_to 'Free account', new_user_registration_path, class: "link-nav main-button" %>
+    <%= link_to 'Free account', new_user_registration_path, class: "link-nav main-button " %>
   <% end %>
 </nav>
 <div id="main">
