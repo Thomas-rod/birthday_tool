@@ -51,6 +51,10 @@
             width:75%;
           }
 
+          #today-birthday {
+            height:30vh;
+          }
+
     #list-birthday {
       height:60vh;
     }
@@ -89,6 +93,7 @@
     display:block;
     width:5rem;
     height:5rem;
+    // animation: logoAddMoov 5s infinite;
   }
 }
 
@@ -140,12 +145,119 @@
 //      TODAY-BIRTHDAY      //
 //--------------------------//
 
+#today-birthday {
+  position:relative;
+  svg {
+    position:absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
  #today-birthday h5 {
   text-align:center;
  }
 
 .fullname {
   font-size:1.5rem;
+}
+
+//--------------------------//
+//        CHAT BUBBLE       //
+//--------------------------//
+
+
+.chat-bubble {
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  color: $white;
+  font-weight:bold;
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0px 10px 20px 4px rgba(0,0,0, 0.2);
+  width:50%;
+}
+.bubble {
+  border-radius:50%;
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0px 10px 20px 4px rgba(0,0,0, 0.2);
+  position:absolute;
+}
+.bubble-one {
+  padding: 1rem;
+  top: 42%;
+  left:39%;
+}
+
+.bubble-two {
+  padding: 0.5rem;
+  top: 50%;
+  left:35%;
+}
+
+
+     .chat-bubble {animation: floatingChat 20s infinite;}
+ .bubble-one {animation: floatingBubbleOne 20s infinite;}
+ .bubble-two {animation: floatingBubbleTwo 20s infinite;}
+
+//--------------------------//
+//        KEY FRAMES        //
+//--------------------------//
+
+// ADD BIRTHDAY //
+
+@keyframes logoAddMoov {
+  from {transform: translate(0,0)}
+  20% {
+    transform: translate(0,5px);
+  }
+  40% {
+    // transform: translate(0,5px);
+    transform: rotate(-0.2turn);
+  }
+  60% {
+    // transform: translate(0,5px);
+    transform: rotate(0.2turn);
+  }
+  80% {
+    // transform: translate(0,5px);
+    transform: rotate(-0.3turn);
+  }
+  95% {
+    transform: translate(0,2px);
+  }
+  to {transform: translate(0,0)}
+}
+
+
+
+// CHAT BUBBLE //
+
+@keyframes floatingChat {
+  from {transform: translate(0px, 0px)}
+  33% {transform: translate(0px, -10px)}
+  66% {transform: translate(0px, 10px)}
+  to {transform: translate(0px, 0px)}
+}
+
+@keyframes floatingBubbleOne {
+  from {transform: translate(0px, 0px)}
+  33% {transform: translate(0px, -8px)}
+  66% {transform: translate(0px, 8px)}
+  to {transform: translate(0px, 0px)}
+}
+
+@keyframes floatingBubbleTwo {
+  from {transform: translate(0px, 0px)}
+  33% {transform: translate(0px, -5px)}
+  66% {transform: translate(0px, 5px)}
+  to {transform: translate(0px, 0px)}
 }
 
 //--------------------------//

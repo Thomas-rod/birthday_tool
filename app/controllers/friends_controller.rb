@@ -13,7 +13,7 @@ class FriendsController < ApplicationController
     @friend = Friend.new(friend_params)
     @friend.user = current_user
     define_gender(@friend)
-    if @friend.save!
+    if @friend.save
       redirect_to friends_path, notice: "Youpi ! #{@friend.first_name} have been added 🚀"
     else
       redirect_to friends_path, alert: "Aïe, something went wrong..."
@@ -51,7 +51,7 @@ class FriendsController < ApplicationController
     if male.include?(nickname)
       friend.gender = "male"
     elsif female.include?(nickname)
-      friend.gender = "male"
+      friend.gender = "female"
     else
       friend.gender = "animal"
     end
