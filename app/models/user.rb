@@ -12,9 +12,8 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates :gender, inclusion: {in: GENDER }
-  validates :first_name, :last_name, :birthday_date, presence: true
 
-  before_save :profile_picture_placeholder
+  after_create :profile_picture_placeholder
 
   #---------------------------------#
   #             CALLBACK            #
@@ -27,6 +26,7 @@ class User < ApplicationRecord
     else
       self.photo_placeholder = define_animal(self)
     end
+    self.save!
   end
 
 
@@ -38,6 +38,7 @@ class User < ApplicationRecord
 
   def send_reminder_previous_day
     self.all.each do |user|
+      tomorow_birthdays = []
       tomorow_birthdays = user.birthdays.select{ |b| b.start.day == (Date.today.day + 1) && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_previous_day == true }
       UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_previous_day.deliver_now
     end
@@ -45,6 +46,7 @@ class User < ApplicationRecord
 
   def send_reminders_today_morning
     self.all.each do |user|
+      today_birthdays = []
       today_birthdays = user.birthdays.select{ |b| b.start.day == Date.today.day && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_morning == true }
       UserMailer.with(user: user, today_birthdays: tomorow_birthdays).send_reminders_today_morning.deliver_now
     end
@@ -52,6 +54,7 @@ class User < ApplicationRecord
 
   def send_reminders_today_noon
     self.all.each do |user|
+      tomorow_birthdays = []
       tomorow_birthdays = user.birthdays.select{ |b| b.start.day == Date.today.day && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_noon == true }
       UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_today_noon.deliver_now
     end
@@ -59,6 +62,7 @@ class User < ApplicationRecord
 
   def send_reminders_today_night
     User.all.each do |user|
+      tomorow_birthdays = []
       tomorow_birthdays = user.birthdays.select{ |b| (b.start.day) == (Date.today.day) && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_night == true }
       UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_today_night.deliver_now
     end
