@@ -1,19 +1,29 @@
 <nav>
-  <span class="logo"><span class="rainbow">C</span>ooki</span>
-  <% if current_user %>
-    <%= link_to "Dashboard", friends_path, class:"link-nav main-button " %>
-  <% else %>
-    <%= link_to 'Sign in', new_user_session_path, class: "link-nav" %>
-    <%= link_to 'Free account', new_user_registration_path, class: "link-nav main-button " %>
-  <% end %>
+  <div id="icon-section">
+    <%= image_tag 'food-and-restaurant.svg', class:"logo-icon" %>
+    <span class="logo title">Cooki</span>
+  </div>
+  <div id="login-section">
+    <% if current_user %>
+      <%= link_to "Dashboard", friends_path, class:"link-nav rainbow-button " %>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path, class: "link-nav" %>
+      <%= link_to 'Free account', new_user_registration_path, class: "link-nav rainbow-button " %>
+    <% end %>
+  </div>
 </nav>
 <div id="main">
   <div id="main--valueprop">
     <h1 class="title rainbow-label">Stop forgetting Birthdays</h1>
-    <h3>Switch to Cooki</h3>
-    <%= link_to 'Free account', new_user_registration_path, class: "link-nav link-nav__block main-button" %>
+    <h3 class="rainbow-label title">Switch to Cooki</h3>
+    <%= link_to 'Free account', new_user_registration_path, class: "link-nav link-nav__block rainbow-button" %>
   </div>
-  <div class="cake">
+  <div id="main--mockup">
+    <%= image_tag 'iPhoneX-Silver.svg', id:"mockup-image" %>
+    <video autoplay loop muted id="mockup_video" src="https://res.cloudinary.com/dwuorvpu5/video/upload/v1592911592/cooki/ezgif.com-crop_q2vgs9.mp4"></video>
+  </div>
+
+  <!-- <div class="cake">
       <div class="plate"></div>
       <div class="layer layer-bottom"></div>
       <div class="layer layer-middle"></div>
@@ -25,5 +35,5 @@
       <div class="candle">
           <div class="flame"></div>
       </div>
-  </div>
+  </div> -->
 </div>

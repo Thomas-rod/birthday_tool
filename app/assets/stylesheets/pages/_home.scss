@@ -17,12 +17,18 @@ nav {
   top:0;
   height:$margin-top;
   display:flex;
+  justify-content:space-between;
   align-items:center;
 }
 
 #main {
-  margin: 0 $margin-side;
-  height:85vh;
+  background: rgb(160,196,255);
+  background: -moz-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
+  padding: 0 $margin-side;
+  height:100vh;
 }
 
 
@@ -39,12 +45,26 @@ nav {
   }
 }
 
+#icon-section {
+  width:40%;
+  height:$margin-top;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  .logo {
+    width:100%;
+    display:block;
+    margin-left: 15px;
+    transform:translate(0px,15px);
+  }
+}
+
 //------------------------//
 //      MAIN SECTION      //
 //------------------------//
 
 #main {
-  margin-top:$margin-top;
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
@@ -53,9 +73,29 @@ nav {
     #main--valueprop {
       width:60%;
       margin: auto 0;
-      a {
-        width:50%;
+      h1 {font-size: 5rem;}
+      h3 {font-size:2rem;}
+      a {width:50%;}
+    }
+
+    #main--mockup {
+      width:40%;
+      margin: auto 0;
+      position:relative;
+      #mockup-image {
+        margin: 0 auto;
+        padding:4rem 0 0 0;
+        display:block;
+        width:60%;
+        height:100%;
       }
+    }
+
+    #mockup_video {
+      width:50%;
+      position:absolute;
+      top: 10%;
+      right:20%;
     }
 
 
@@ -67,10 +107,14 @@ nav {
   font-size:4rem;
 }
 
+.logo-icon {
+  width:90px;
+}
+
 .title {
-  font-size: 5rem;
+  margin-bottom:1rem;
   background-color: $red;
-  background-image: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
+  background-image: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
   font-weight:bold;
   background-size: 100%;
   background-repeat: repeat;

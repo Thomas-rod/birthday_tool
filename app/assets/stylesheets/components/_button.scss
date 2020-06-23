@@ -16,7 +16,7 @@
 
 .main-button {
   background-color: $light-blue;
-  color:$dark;
+  color:$white;
   border:1px solid $light-blue;
   &:hover {
     color: $yellow;
@@ -33,7 +33,7 @@
   background: rgb(253,255,182);
   background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
   border: 0px;
-  transition: background 2s;
+  transition: background 0.2s, transform 0.2s;
   &:hover {
     color:$dark;
     background: linear-gradient(290deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
