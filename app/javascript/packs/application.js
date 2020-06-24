@@ -29,10 +29,17 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { modalLogout } from '../components/modal_logout'
 import { modalAddBirthday } from '../components/modal_add_birthday'
+import { confettiLoader } from '../components/confeti'
+import { displayFormProfil } from '../components/onboarding_flow'
+import { validationFormProfil } from '../components/validation_form_profil'
+
 
 document.addEventListener('turbolinks:load', () => {
   modalLogout();
   modalAddBirthday();
+  confettiLoader();
+  displayFormProfil();
+  validationFormProfil();
   // Call your functions here, e.g:
   // initSelect2();
 });

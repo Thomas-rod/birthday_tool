@@ -1,0 +1,61 @@
+#onboarding-container {
+  min-height:100vh;
+  max-height:100vh;
+  width:100%;
+}
+#onboarding-container--description,
+.onboarding-container--form {
+  width:70%;
+  margin: 0 auto;
+  padding: 3rem 0 0 0 ;
+}
+
+
+#onboarding-container--description {
+  text-align:center;
+  .title.rainbow-label {
+    font-size:6rem;
+    margin-bottom: 3rem;
+  }
+  h2,
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.onboarding-container--form {
+  display:none;
+  .btn {
+    display:table;
+    margin: 0 auto;
+  }
+}
+
+.form--name,
+.form--other {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.form--name .form-group {
+  width:30%;
+}
+.form--other  .form-group {
+  width: 45%;
+}
+
+.form--other--uploadpp {
+  text-align:center;
+}
+
+
+.past-validation {
+  // color:$green;
+  border:1px solid $green;
+}
+
+#button-submit-form-onboarding {
+  display:none;
+}

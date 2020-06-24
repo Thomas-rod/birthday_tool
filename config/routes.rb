@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get 'onboarding/', to: "pages#onboarding", as: :onboarding
   # post 'onboarding/', to: "pages#onboarding", as: :onboarding
-  resources :friends, only: [:index, :create];
+  resources :friends, only: [:index, :create, :new];
+
+  resources :profils, only: [:create];
 end

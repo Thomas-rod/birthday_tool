@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_22_130700) do
+ActiveRecord::Schema.define(version: 2020_06_23_161222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(version: 2020_06_22_130700) do
     t.index ["user_id"], name: "index_friends_on_user_id"
   end
 
+  create_table "profils", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.string "photo_placeholder"
+    t.date "birthday_date"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profils_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,11 +83,6 @@ ActiveRecord::Schema.define(version: 2020_06_22_130700) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "first_name", default: ""
-    t.string "last_name", default: ""
-    t.date "birthday_date", default: "-4712-01-01"
-    t.string "gender", default: "male"
-    t.string "photo_placeholder", default: "001-man"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

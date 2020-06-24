@@ -130,7 +130,7 @@
         <%= f.input :last_name, required: true, label: "His/Her last name ?", label_html: { class:"rainbow-label"}, placeholder: 'Doe or Dae...' %>
         <%= f.input :nickname, required: true, label: "His/Her nickname ?", label_html: { class:"rainbow-label"},prompt: "Select one", collection: ["dad", "mom", "brother", "sister", "uncle", "aunt", "stepfather", "stepmother", "father-in-law", "mother-in-law","grandmother", "grandfather", "best-friend", "boy-friend", "girl-friend", "friend", "dog", "cat", "horse"] %>
       </div>
-      <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "Now, what's his/her birthday ?", label_html: { class:"rainbow-label", id:"birthday-date-section"}, placeholder: 'Doe or Dae ?' %>
+      <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "Now, what's his/her birthday ?", label_html: { class:"rainbow-label", id:"birthday-date-section"}%>
       <p class="rainbow-label" id="photo-section">Do you want to add a picture ? (PS: If you don't, we will generate an avatar)</p>
       <%= f.file_field :photo, required: false, name: 'photo'%>
       </label>

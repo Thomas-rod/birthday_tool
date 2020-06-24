@@ -5,7 +5,13 @@ class FriendsController < ApplicationController
     today_birthday
     @birthdays = birthday_scope
     @birthday_of_the_month = birthday_of_the_month
+  end
 
+  def new
+    authorize Friend
+    @user = current_user
+    @profil = @user.profil
+    @friend = Friend.new();
   end
 
   def create

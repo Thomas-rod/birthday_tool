@@ -15,8 +15,10 @@ Friend.destroy_all
 puts "Well, it's done ! Now, let's go creating seeds"
 
 puts "Second step : User creation - Initialization "
-thomas = User.create!(first_name: "Thomas", last_name: "Rodier", email: "thomas@gmail.com", password: "thomas@gmail.com", birthday_date: Date.new(1995, 2, 17))
-puts "Second step : #{User.count} Users have been created - Done"
+thomas = User.create!(email: "thomas@gmail.com", password: "thomas@gmail.com")
+thomas_profil = Profil.create!(first_name: "Thomas", last_name: "Rodier",  birthday_date: Date.new(1995, 2, 17), gender: "male", user: thomas)
+
+puts "Second step : #{User.count} Users have been created  &  #{Profil.count} Profils have beend created - Done"
 
 puts "Third step : Friends creation - Initialization "
 Friend.create!(user: thomas, first_name: "Thierry", last_name: "Rodier", birthday_date: Date.new(1966, 6, 15), nickname: "dad",gender: 'male')

@@ -1,3 +1,5 @@
+
+
 .navbar-app {
   // WHEN CHANGES IN THIS VARIABLE DO NOT FORGET TO UPDETE MARGIN-TOP FROM _IDENX_FRIEDNS.SCSS
   width:100%;
@@ -5,19 +7,10 @@
   position:absolute;
   top:0;
   left:0;
+  padding: 0 2rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-
-.logo-navbar {
-  margin-left:2rem;
-  a {
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    font-size:3rem;
-  }
 }
 
 .log-avatar {
@@ -35,3 +28,32 @@
   }
 }
 
+
+#navbar-icon-section {
+  height:10vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  .logo {
+    width:100%;
+    display:block;
+    margin-left: 15px;
+    transform:translate(0px,15px);
+  }
+}
+
+
+//------------------------//
+//       SPECIFIC         //
+//------------------------//
+
+.logo-navbar {
+  font-size:3rem;
+  transform:translateY(15px);
+  margin-left:1rem;
+}
+
+.logo-icon-navbar {
+  width:60px;
+}

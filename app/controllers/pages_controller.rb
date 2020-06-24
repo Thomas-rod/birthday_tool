@@ -6,5 +6,6 @@ class PagesController < ApplicationController
 
   def onboarding
     @user = current_user
+    @profil = Profil.new()
   end
 end

@@ -1,17 +1,17 @@
 <div class="navbar-app">
-  <div class="logo-navbar">
-    <%= link_to root_path do %>
-      <%#= image_tag 'logo_remove.png', class:"avatar-large" %>
-      <span>Cooki</span>
-    <% end %>
-  </div>
+  <%= link_to root_path do %>
+    <div id="navbar-icon-section">
+      <%= image_tag 'food-and-restaurant.svg', class:"logo-icon-navbar" %>
+      <span class="logo-navbar title">Cooki</span>
+    </div>
+  <% end %>
   <div class="log-avatar" id="navigation-avatar">
-    <% if current_user.photo.attached? %>
-      <%= cl_image_tag current_user.photo.key, class:"avatar-large" %>
+    <% if current_user.profil.photo.attached? %>
+      <%= cl_image_tag current_user.profil.photo.key, class:"avatar-large" %>
     <% else %>
-      <%= image_tag "#{current_user.photo_placeholder}.svg", class:"avatar-large" %>
+      <%= image_tag "#{current_user.profil.photo_placeholder}.svg", class:"avatar-large" %>
     <% end %>
-    <p id="name-navbar"><%= current_user.full_name %></p>
+    <p id="name-navbar"><%= current_user.profil.full_name %></p>
     <i class="fas fa-caret-down"></i>
     <div class="backdrop"></div>
     <div class="modal-navigation-bg">

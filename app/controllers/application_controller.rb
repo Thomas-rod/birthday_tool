@@ -1,9 +1,12 @@
 class ApplicationController < ActionController::Base
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   protect_from_forgery
 
   include Pundit
+
+
 
     # Pundit: white-list approach.
     after_action :verify_authorized, except: :index, unless: :skip_pundit?
@@ -20,8 +23,13 @@ class ApplicationController < ActionController::Base
     #-----------------------------------#
               protected
     #------------------------------------#
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:account_update, keys: [:username, :first_name, :last_name, :gender, :birthday_date])
+    end
+
     def after_sign_in_path_for(resource_or_scope)
-      if current_user.first_name == ""
+      if current_user.profil.nil?
         onboarding_path
       else
         friends_path
@@ -29,7 +37,7 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_up_path_for(resource_or_scope)
-      if current_user.first_name == ""
+      if current_user.profil.nil?
         onboarding_path
       else
         friends_path
