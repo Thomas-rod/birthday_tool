@@ -7,6 +7,8 @@ class Profil < ApplicationRecord
   validates :first_name, :last_name, :gender, :birthday_date, presence: true
   validates :gender, inclusion: {in: GENDER }
 
+  validate :age_profil
+
   after_create :profile_picture_placeholder
 
   #---------------------------------#
@@ -23,6 +25,13 @@ class Profil < ApplicationRecord
       end
       self.save!
     end
+  end
+
+  def age_profil
+    if birthday_date == Date.today
+      errors.add(:birthday_date, "can't be today")
+    end
+
   end
 
   #---------------------------------#

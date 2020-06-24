@@ -1,8 +1,13 @@
+//--------------------------------//
+//    ONBOARDING POSITIONNING     //
+//--------------------------------//
+
 #onboarding-container {
   min-height:100vh;
   max-height:100vh;
   width:100%;
 }
+
 #onboarding-container--description,
 .onboarding-container--form {
   width:70%;
@@ -25,7 +30,7 @@
 
 
 .onboarding-container--form {
-  display:none;
+  display: none;
   .btn {
     display:table;
     margin: 0 auto;
@@ -39,23 +44,138 @@
   align-items:center;
 }
 
-.form--name .form-group {
+//--------------------------------//
+//          ELEMENT CSS           //
+//--------------------------------//
+
+.form--name .form--input {
   width:30%;
 }
-.form--other  .form-group {
+.form--other  .form--input {
   width: 45%;
 }
 
 .form--other--uploadpp {
-  text-align:center;
+  // text-align:center;
 }
 
+//--------------------------------//
+//          JS VALIDATION         //
+//--------------------------------//
+
+.error-message {
+  height:2rem;
+  width:100%;
+}
+.error-message-input {
+  color: red;
+  font-weight:bold;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
 
 .past-validation {
-  // color:$green;
-  border:1px solid $green;
+  border:3px solid $green;
 }
 
-#button-submit-form-onboarding {
-  display:none;
+
+//--------------------------//
+//--------------------------//
+//      RESPONSIVENESS      //
+//--------------------------//
+//--------------------------//
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  #onboarding-container {
+    overflow:scroll;
+    margin: 0 auto 2rem auto;
+  }
+
+  #onboarding-container--description,
+  .onboarding-container--form {
+    width:90%;
+    }
+
+    .form--name,
+    .form--other {
+      display:block;
+    }
+        .form--input {
+          width:90% !important;
+          .form-control {
+            font-size: 2rem;
+          }
+        }
+
+
+  .error-message {
+    height:4rem;
+  }
+
+  .onboarding-container--form .btn {
+    margin: 2rem auto;
+  }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+
+  html {
+    font-size: 55%;
+  }
+
+  #onboarding-container {
+    overflow:scroll;
+    margin: 0 auto 2rem auto;
+  }
+
+  #onboarding-container--description,
+  .onboarding-container--form {
+    width:90%;
+    }
+
+    .form--name,
+    .form--other {
+      display:block;
+    }
+        .form--input {
+          width:90% !important;
+          .form-control {
+            font-size: 2rem;
+          }
+        }
+
+
+  .error-message {
+    height:4rem;
+  }
+
+  .onboarding-container--form .btn {
+    margin: 2rem auto;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+
+}
+

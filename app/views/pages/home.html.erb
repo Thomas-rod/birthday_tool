@@ -5,7 +5,11 @@
   </div>
   <div id="login-section">
     <% if current_user %>
-      <%= link_to "Dashboard", friends_path, class:"link-nav rainbow-button " %>
+      <% if current_user.profil.nil? %>
+        <%= link_to "Dashboard", onboarding_path, class:"link-nav rainbow-button " %>
+      <% else %>
+        <%= link_to "Dashboard", friends_path, class:"link-nav rainbow-button " %>
+      <% end %>
     <% else %>
       <%= link_to 'Sign in', new_user_session_path, class: "link-nav" %>
       <%= link_to 'Free account', new_user_registration_path, class: "link-nav rainbow-button " %>

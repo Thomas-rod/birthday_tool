@@ -6,20 +6,65 @@
     <button class="link-nav rainbow-button" id="button-onboarding-display">Let's go</button>
   </div>
   <div class="onboarding-container--form">
-  <%= simple_form_for @profil, url: profils_path, autocomplete: "off", method: 'post' do |f| %>
+  <%= simple_form_for @profil, url: profils_path, method: 'post' do |f| %>
     <div class="form--name">
-      <%= f.input :first_name, autocomplete: "off", label: "What's your little name ?" %>
-      <%= f.input :last_name, label: "What's your last name ?" %>
-      <%= f.input :gender, label: "What is your gender ?", collection: ["male", "female", "animal", "other"] %>
+      <div class="form--input">
+        <%= f.input :first_name, label: "What's your little name ?" %>
+        <div class="error-message" id="first-name-errors">
+          <% if flash[:profil_errors] %>
+            <% flash[:profil_errors].each do |message| %>
+              <% if message.include?('first_name') %>
+                <p class='error-message-input'>Did you forget your first name ?</p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form--input">
+        <%= f.input :last_name, label: "What's your last name ?" %>
+        <div class="error-message" id="last-name-errors">
+          <% if flash[:profil_errors] %>
+            <% flash[:profil_errors].each do |message| %>
+              <% if message.include?('last_name') %>
+                <p class='error-message-input'>Did you forget your last name ?</p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form--input">
+        <%= f.input :gender, label: "What is your gender ?", collection: ["male", "female", "animal", "other"] %>
+        <div class="error-message" id="gender-errors">
+          <% if flash[:profil_errors] %>
+            <% flash[:profil_errors].each do |message| %>
+              <% if message.include?('gender') %>
+                <p class='error-message-input'>Did you forget your gender ?</p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="form--other">
-      <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "What's your birthday ?", label_html: { id:"birthday-date-section"}%>
+      <div class="form--input">
+        <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "What's your birthday ?", label_html: { id:"birthday-date-section-onboarding"}%>
+        <div class="error-message" id="birthday-date-errors">
+          <% if flash[:profil_errors] %>
+            <% flash[:profil_errors].each do |message| %>
+              <% if message.include?('birthday_date') %>
+                <p class='error-message-input'>Come on .. Do we need to remind you your own birthday ?</p>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
       <div class="form--other--uploadpp">
-        <p>Do you want a cool profil picture ?<br> Just upload it ! (or we will generate one for you)</p>
-        <%= f.file_field :photo, required: false, name: 'photo'%>
+        <p>Do you want a cool profil picture ?</p>
+        <%= f.input :photo, as: :file, label: false, required: false, name: 'photo'%>
       </div>
     </div>
     <%= f.button :submit, "Go to next step", class:"link-nav rainbow-button", id:'button-submit-form-onboarding'%>
   <% end %>
   </div>
 </div>
+

@@ -16,7 +16,7 @@ puts "Well, it's done ! Now, let's go creating seeds"
 
 puts "Second step : User creation - Initialization "
 thomas = User.create!(email: "thomas@gmail.com", password: "thomas@gmail.com")
-thomas_profil = Profil.create!(first_name: "Thomas", last_name: "Rodier",  birthday_date: Date.new(1995, 2, 17), gender: "male", user: thomas)
+# thomas_profil = Profil.create!(first_name: "Thomas", last_name: "Rodier",  birthday_date: Date.new(1995, 2, 17), gender: "male", user: thomas)
 
 puts "Second step : #{User.count} Users have been created  &  #{Profil.count} Profils have beend created - Done"
 

@@ -31,7 +31,7 @@ import { modalLogout } from '../components/modal_logout'
 import { modalAddBirthday } from '../components/modal_add_birthday'
 import { confettiLoader } from '../components/confeti'
 import { displayFormProfil } from '../components/onboarding_flow'
-import { validationFormProfil } from '../components/validation_form_profil'
+// import { validationFormProfil } from '../components/validation_form_profil'
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -39,7 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   modalAddBirthday();
   confettiLoader();
   displayFormProfil();
-  validationFormProfil();
+  // validationFormProfil();
   // Call your functions here, e.g:
   // initSelect2();
 });

@@ -3,29 +3,29 @@
     <h1 class="title rainbow-label">Welcome Onboard !</h1>
     <h2>Youpi ! You complete the first step</h2>
     <h3>Now, let's add your first friend !</h3>
-    <button class="link-nav rainbow-button" id="button-onboarding-display">Let's go</button>
+    <button class="link-nav rainbow-button" id="button-onboarding-display">Second step</button>
   </div>
   <div class="onboarding-container--form" id="new-friend">
     <%= simple_form_for @friend, method: 'post' do |f| %>
       <div id="name-section">
-        <%= f.input :first_name, required: true, label: "His/Her little name ?", label_html: { class:"rainbow-label"}, placeholder: 'Nicky or James...' %>
-        <%= f.input :last_name, required: true, label: "His/Her last name ?", label_html: { class:"rainbow-label"}, placeholder: 'Doe or Dae...' %>
-        <%= f.input :nickname, required: true, label: "His/Her nickname ?", label_html: { class:"rainbow-label"},prompt: "Select one", collection: ["dad", "mom", "brother", "sister", "uncle", "aunt", "stepfather", "stepmother", "father-in-law", "mother-in-law","grandmother", "grandfather", "best-friend", "boy-friend", "girl-friend", "friend", "dog", "cat", "horse"] %>
+        <%= f.input :first_name, required: true, label: "His/Her little name ?", placeholder: 'Nicky or James...' %>
+        <%= f.input :last_name, required: true, label: "His/Her last name ?", placeholder: 'Doe or Dae...' %>
+        <%= f.input :nickname, required: true, label: "His/Her nickname ?",prompt: "Select one", collection: ["dad", "mom", "brother", "sister", "uncle", "aunt", "stepfather", "stepmother", "father-in-law", "mother-in-law","grandmother", "grandfather", "best-friend", "boy-friend", "girl-friend", "friend", "dog", "cat", "horse"] %>
       </div>
       <div id="specific-new--form">
-        <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "Now, what's his/her birthday ?", label_html: { class:"rainbow-label", id:"birthday-date-section"}%>
+        <%= f.input :birthday_date, required: true, as: 'date', start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "Now, what's his/her birthday ?", label_html: { id:"birthday-date-section-new-friend"}%>
         <div>
-          <p class="rainbow-label" id="photo-section">Do you want to add a picture ? (PS: If you don't, we will generate an avatar)</p>
+          <p id="photo-section">Do you want to add a picture ? (PS: If you don't, we will generate an avatar)</p>
           <%= f.file_field :photo, required: false, name: 'photo'%>
         </div>
       </div>
       </label>
-      <p class="rainbow-label" id="label-radio-button-section">When do you want to receive reminders ?</p>
+      <p id="label-radio-button-section">When do you want to receive reminders ?</p>
       <div id="radio-button-section">
-        <%= f.input :reminder_previous_day, label: "One day before ?", label_html: { class:"rainbow-label"}, as: :radio_buttons  %>
-        <%= f.input :reminder_today_morning, label: "Same day at morning ?", label_html: { class:"rainbow-label"}, as: :radio_buttons  %>
-        <%= f.input :reminder_today_noon, label: "Same day at noon ?", label_html: { class:"rainbow-label"}, as: :radio_buttons  %>
-        <%= f.input :reminder_today_night, label: "Same day at night ?", label_html: { class:"rainbow-label"}, as: :radio_buttons  %>
+        <%= f.input :reminder_previous_day, label: "One day before ?", as: :radio_buttons  %>
+        <%= f.input :reminder_today_morning, label: "Same day at morning ?", as: :radio_buttons  %>
+        <%= f.input :reminder_today_noon, label: "Same day at noon ?", as: :radio_buttons  %>
+        <%= f.input :reminder_today_night, label: "Same day at night ?", as: :radio_buttons  %>
       </div>
       <div id="footer-section">
         <%= f.button :submit, "Create a new friend", class:"link-nav rainbow-button" %>
