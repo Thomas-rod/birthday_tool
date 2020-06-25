@@ -11,7 +11,7 @@ class UserMailer < ApplicationMailer
     @tomorow_birthdays = params[:tomorow_birthdays]
     mail(
       to: @user.email,
-      subject: "Hey #{@user.first_name.capitalize}, big news ! Tomorow one of your friend had his birthday 🚀"
+      subject: "Hey #{@user.profil.first_name.capitalize}, big news ! Tomorow one of your friend had his birthday 🚀"
     )
   end
 
@@ -21,7 +21,7 @@ class UserMailer < ApplicationMailer
     @today_birthdays = params[:today_birthdays]
     mail(
       to: @user.email,
-      subject: "Hey #{@user.first_name.capitalize}, do not forget your friend's birthday today 🚀 !"
+      subject: "Hey #{@user.profil.first_name.capitalize}, do not forget your friend's birthday today 🚀 !"
     )
   end
 
@@ -31,7 +31,7 @@ class UserMailer < ApplicationMailer
     @today_birthdays = params[:today_birthdays]
     mail(
       to: @user.email,
-      subject: "Hey #{@user.first_name.capitalize}, did you call ?"
+      subject: "Hey #{@user.profil.first_name.capitalize}, did you call ?"
     )
   end
 
@@ -41,7 +41,7 @@ class UserMailer < ApplicationMailer
     @today_birthdays = params[:today_birthdays]
     mail(
       to: @user.email,
-      subject: "#{@user.first_name.capitalize} it's almost too late 🚀 !"
+      subject: "#{@user.profil.first_name.capitalize} it's almost too late 🚀 !"
     )
   end
 end
