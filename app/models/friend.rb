@@ -25,6 +25,15 @@ class Friend < ApplicationRecord
     end
   end
 
+  def days_before_birthday
+    birthdays_year_year_plus_one = self.birthdays.select{|b| b.start.year == Date.today.year || b.start.year == (Date.today.year + 1)}
+    if birthdays_year_year_plus_one[0].start < Date.today
+      return (birthdays_year_year_plus_one[1].start - Date.today).to_i
+    else
+      return (birthdays_year_year_plus_one[0].start - Date.today).to_i
+    end
+  end
+
   def profile_picture_placeholder
     if self.gender == "male"
       self.photo_placeholder = random_male_photo

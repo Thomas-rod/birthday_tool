@@ -112,7 +112,7 @@
           </div>
         </div>
         <p>Birthday date : <%= friend.birthday_date.strftime("%-d %B")%></p>
-        <p>23 days left before birthday !</p>
+        <p><%= friend.days_before_birthday %> days left before birthday !</p>
       </div>
       <% counter +=1 %>
       <% end %>

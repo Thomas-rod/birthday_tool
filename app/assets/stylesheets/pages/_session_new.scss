@@ -71,6 +71,7 @@
   }
   .session-div {
     flex-direction:column;
+    justify-content:center;
   }
   .session-div--image,
   .session-div--login {
@@ -78,10 +79,16 @@
     padding: 2rem 0;
   }
 
-  .session-div--image .logo {
-    display:table;
-    font-size: 5rem;
-    margin: 1rem auto 0 auto;
+  .session-div--image {
+    .logo {
+      display:table;
+      font-size: 5rem;
+      margin: 1rem auto 0 auto;
+    }
+    .logo-icon {
+      width: 80%;
+      margin:0 auto;
+    }
   }
   .session-div--login {
     text-align:center;
@@ -97,6 +104,9 @@
     }
     .form-check-label {
       margin-left: 2rem;
+    }
+    .form-control {
+      font-size:2rem;
     }
     label {
       font-size:2rem;
@@ -122,11 +132,18 @@
     padding: auto 0;
   }
 
-  .session-div--image .logo {
-    display:table;
-    font-size: 5rem;
-    margin: 1rem auto 0 auto;
+  .session-div--image {
+    .logo {
+      display:table;
+      font-size: 5rem;
+      margin: 1rem auto 0 auto;
+    }
+    .logo-icon {
+      width: 80%;
+      margin:0 auto;
+    }
   }
+
   .session-div--login {
     text-align:center;
     .session-div--login--form {
@@ -141,6 +158,9 @@
     }
     .form-check-label {
       margin-left: 2rem;
+    }
+    .form-control {
+      font-size:2rem;
     }
     label {
       font-size:2rem;

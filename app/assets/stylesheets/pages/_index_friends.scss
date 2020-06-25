@@ -320,20 +320,31 @@
     height:unset !important;
   }
 
-  #add-birthday,
-  #animation-birthday {
-    height:25vh !important;
+  #container-content--right--top {
+    display:block;
   }
 
+      #add-birthday,
+      #animation-birthday {
+        height:unset !important;
+      }
+
   #add-birthday {
-    width:30%;
-    padding:4rem 0;
+    width:100%;
     color:$dark;
     background: rgb(253,255,182);
     background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+    svg {
+      margin:0 auto 0.5rem auto;
+      display:block;
+      width:8rem;
+      height:8rem;
+    }
+    p{font-size:2rem;}
   }
+
   #animation-birthday {
-    width:65%;
+    width:100%;
     h5 {
       text-align:center;
     }
@@ -380,7 +391,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) and (min-width: 400px){
+@media only screen and (max-width: 992px) and (min-width: 400px){
   //--------------------------//
   //        GLOBAL CSS        //
   //--------------------------//
@@ -432,20 +443,30 @@
     height:unset !important;
   }
 
-  #add-birthday,
-  #animation-birthday {
-    height:25vh !important;
+  #container-content--right--top {
+    display:block;
   }
+      #add-birthday,
+      #animation-birthday {
+        height:unset !important;
+      }
 
   #add-birthday {
-    width:30%;
-    padding:4rem 0;
+    width:100%;
     color:$dark;
     background: rgb(253,255,182);
     background: linear-gradient(145deg, rgba(253,255,182,1) 20%, rgba(202,255,191,1) 50%, rgba(155,246,255,1) 80%);
+    svg {
+      margin:0 auto 0.5rem auto;
+      display:block;
+      width:8rem;
+      height:8rem;
+    }
+    p{font-size:2rem;}
   }
+
   #animation-birthday {
-    width:65%;
+    width:100%;
     h5 {
       text-align:center;
     }

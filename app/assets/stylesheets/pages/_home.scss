@@ -10,9 +10,13 @@ $margin-side: 7rem;
 //          DISPOSITION            //
 //--------------------------------//
 
+nav,
+#main {
+  padding: 0 $margin-side;
+}
+
 nav {
   width:100%;
-  padding: 0 $margin-side;
   position:absolute;
   top:0;
   height:$margin-top;
@@ -27,7 +31,6 @@ nav {
   background: -webkit-linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
   background: linear-gradient(148deg, rgba(160,196,255,1) 43%, rgba(155,246,255,1) 80%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a0c4ff",endColorstr="#9bf6ff",GradientType=1);
-  padding: 0 $margin-side;
   height:100vh;
 }
 
@@ -80,22 +83,21 @@ nav {
 
     #main--mockup {
       width:40%;
-      margin: auto 0;
+      margin-top: 15vh ;
       position:relative;
+    }
       #mockup-image {
-        margin: 0 auto;
-        padding:4rem 0 0 0;
         display:block;
-        width:60%;
+        width:320px;
         height:100%;
       }
-    }
 
     #mockup_video {
-      width:50%;
+      height:96%;
       position:absolute;
-      top: 10%;
-      right:20%;
+      top: 0.8rem;
+      left: 1.2rem;
+      border-radius:30px;
     }
 
 
@@ -139,9 +141,56 @@ nav {
   //--------------------------//
 
   html {
-    font-size: 10px;
+    font-size: 55%;
   }
 
+  nav,
+  #main {
+    padding: 0rem 2rem 3rem 2rem;
+    height:unset;
+  }
+
+  #login-section a:last-child {
+    display:none;
+  }
+
+  #main {
+    padding-top: 15vh;
+    display:block;
+  }
+
+      #main--valueprop {
+        width:100%;
+        text-align:center;
+        padding: 3rem 0;
+        h1 {
+          font-size:4.5rem;
+        }
+        a {
+          display:table;
+          margin: 0 auto;
+          width:70%;
+        }
+      }
+
+      #main--mockup {
+        margin-top: 3rem;
+        width:200px;
+        margin: 0 auto;
+        // padding: 3rem 0 ;
+      }
+
+        #mockup-image {
+          width:200px;
+        }
+
+  //--------------------------//
+  //       SPECIFIC CSS       //
+  //--------------------------//
+
+  .logo-icon {
+    width:50px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -151,7 +200,7 @@ nav {
   //--------------------------//
 
   html {
-    font-size: 10px;
+    font-size: 55%;
   }
 }
 
