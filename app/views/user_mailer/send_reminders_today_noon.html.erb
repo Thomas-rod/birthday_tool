@@ -1,8 +1,8 @@
 <h1>Well <%= @user.profil.first_name.capitalize %></h1>
 <h4>It's the last reminder and we hope you did it!</h4>
 
-<%= @tomorow_birthdays.each do |birthday| %>
-  <p><%= birthday.friend.first_name.capitalize %> past <%= birthday.friend.friends_age %> and waiting for you !</p>
+<% @tomorow_birthdays.each do |birthday| %>
+  <p><%= birthday.friend.first_name.capitalize %> (past <%= birthday.friend.friends_age %>) is waiting for you !</p>
 <% end %>
 <p>Do not forget to pass a call or send a message.</p>
 <p>And most important, make it memorable ! It only happen once in a year</p>

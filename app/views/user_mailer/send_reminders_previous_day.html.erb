@@ -1,8 +1,8 @@
 <h1>Hello <%= @user.profil.first_name.capitalize %></h1>
 
-<h4>Tomorrow it's a big day for :</h4>
-<%= @tomorow_birthdays.each do |birthday| %>
-  <p><%= birthday.friend.first_name.capitalize %> past <%= birthday.friend.friends_age %></p>
+<h4>Tomorrow is a big day for :</h4>
+<% @tomorow_birthdays.each do |birthday| %>
+  <p><%= birthday.friend.first_name.capitalize %> (past <%= birthday.friend.friends_age %>)</p>
 <% end %>
 <p>Be ready for tomorrow ! It's only happen once in a year. </p>
 <p>Make it memorable !</p>

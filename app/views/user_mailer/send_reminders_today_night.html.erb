@@ -2,8 +2,8 @@
 <h4>Did you have a great lunch ?</h4>
 
 <h4>Once again, a quick reminder beacause today it's a special day for :</h4>
-<%= @tomorow_birthdays.each do |birthday| %>
-  <p><%= birthday.friend.first_name.capitalize %> past <%= birthday.friend.friends_age %></p>
+<% @tomorow_birthdays.each do |birthday| %>
+  <p><%= birthday.friend.first_name.capitalize %> (past <%= birthday.friend.friends_age %>)</p>
 <% end %>
 <p>Do not forget to pass a call or send a message.</p>
 <p>And most important, make it memorable ! It only happen once in a year</p>
