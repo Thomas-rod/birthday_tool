@@ -199,8 +199,60 @@ nav {
   //        GLOBAL CSS        //
   //--------------------------//
 
+    //--------------------------//
+  //        GLOBAL CSS        //
+  //--------------------------//
+
   html {
     font-size: 55%;
+  }
+
+  nav,
+  #main {
+    padding: 0rem 2rem 3rem 2rem;
+    height:unset;
+  }
+
+  #login-section a:last-child {
+    display:none;
+  }
+
+  #main {
+    padding-top: 15vh;
+    display:block;
+  }
+
+      #main--valueprop {
+        width:100%;
+        text-align:center;
+        padding: 3rem 0;
+        h1 {
+          font-size:4.5rem;
+        }
+        a {
+          display:table;
+          margin: 0 auto;
+          width:70%;
+        }
+      }
+
+      #main--mockup {
+        margin-top: 3rem;
+        width:200px;
+        margin: 0 auto;
+        // padding: 3rem 0 ;
+      }
+
+        #mockup-image {
+          width:200px;
+        }
+
+  //--------------------------//
+  //       SPECIFIC CSS       //
+  //--------------------------//
+
+  .logo-icon {
+    width:50px;
   }
 }
 
