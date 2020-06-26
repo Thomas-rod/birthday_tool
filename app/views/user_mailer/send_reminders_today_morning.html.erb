@@ -1,7 +1,7 @@
 <h1>Hello <%= @user.profil.first_name.capitalize %></h1>
 <h4>We hope you had a great night full of beautiful dreams !</h4>
 <h4>Today it's a big day for :</h4>
-<% @tomorow_birthdays.each do |birthday| %>
+<% @today_birthdays.each do |birthday| %>
   <p><%= birthday.friend.first_name.capitalize %> (past <%= birthday.friend.friends_age %>)</p>
 <% end %>
 <p>Do not forget to pass a call or send a message.</p>

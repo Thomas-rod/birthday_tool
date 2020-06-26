@@ -16,14 +16,14 @@ end
 
 task :send_reminders_today_noon => :environment do
   User.all.each do |user|
-    tomorow_birthdays = user.birthdays.select{ |b| b.start.day == Date.today.day && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_noon == true }
+    today_birthdays = user.birthdays.select{ |b| b.start.day == Date.today.day && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_noon == true }
     UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_today_noon.deliver_now
   end
 end
 
 task :send_reminders_today_night => :environment do
   User.all.each do |user|
-    tomorow_birthdays = user.birthdays.select{ |b| (b.start.day) == (Date.today.day) && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_night == true }
+    today_birthdays = user.birthdays.select{ |b| (b.start.day) == (Date.today.day) && b.start.month == Date.today.month && b.start.year == Date.today.year && b.friend.reminder_today_night == true }
     UserMailer.with(user: user, tomorow_birthdays: tomorow_birthdays).send_reminders_today_night.deliver_now
   end
 end
